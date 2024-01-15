@@ -1,0 +1,391 @@
+/************ GENERAL STYLES *************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+
+}
+
+:root{
+    --DARK: #1F2937;
+    --LIGHT: #F9FAF8;
+    --BLUE: #3882F6;
+}
+
+/************ HEADER STYLES *************/
+
+header {
+    display: flex;
+    padding: 30px 7%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--DARK);
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--LIGHT);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo::before {
+    content: "<";
+}
+
+.logo::after {
+    content: "/>";
+}
+
+.logo::before, 
+.logo::after {
+    color: var(--BLUE);
+    font-weight: bold;
+    font-size: 26px;
+    padding: 2px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--LIGHT);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--BLUE);
+    transition: 300ms;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        margin-top: 50px;
+    }
+}
+
+/************ HERO STYLES *************/
+
+#hero {
+    flex-wrap: wrap;
+    padding: 5% 7%;
+    width: 100%;
+    background-color: var(--DARK);
+}
+
+#hero,
+.hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-headline {
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--LIGHT);
+    width: 70%;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+#hero img {
+    max-width: 400px;
+    height: auto;
+}
+
+#hero div {
+    flex: 1;
+    min-width: 350px;
+}
+
+.cta-button {
+    color: #fff;
+    background-color: var(--BLUE);
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+    #hero {
+        flex-direction: column-reverse;
+    }
+
+    #hero div {
+        min-width: 100%;
+    }
+
+    .hero-headline {
+        font-size: 36px;
+        width: 100%;
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cta-button {
+        width: 60%;
+    }
+
+    #hero img {
+        width: 100%;
+    }
+}
+
+/************ PRICING STYLES *************/
+
+#pricing {
+    padding: 4% 7%;
+}
+
+#pricing,
+.pricing-card,
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.pricing-card {
+    padding: 50px 10px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    flex: 1;
+}
+
+.pricing-card:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
+
+.card-image {
+    max-width: 200px;
+    height: auto;
+}
+
+
+.card-body {
+    gap: 20px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 24px;
+}
+
+
+.card-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--BLUE);
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    color:var(--BLUE);
+}
+
+.card-button:hover {
+    background-color: var(--BLUE);
+    color: #fff;
+    transition: 300ms;
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-card {
+        width: 100%;
+    }
+}
+
+/************ TEAM STYLES *************/
+
+
+#team,
+.team-card,
+.team-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#team {
+    padding: 3.5% 7%;
+    background-color: #E5E7EB;
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.team-card {
+    padding: 20px;
+    min-height: 350px;
+    border: 2px solid var(--DARK);
+    border-radius: 15px;
+}
+
+.team-body {
+    width: 100%;
+}
+
+.team-job {
+    color: grey;
+    font-size: 16px;
+}
+
+.team-image {
+    width: 150px;
+    border-radius: 50%;
+    
+}
+
+/************ NEWSLETTER STYLES *************/
+
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 3.5% 7%;
+    background-color: #fff;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--BLUE);
+    width: 100%;
+    padding: 60px;
+    gap: 20px;
+}
+
+.newsletter-title {
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+}
+
+.newsletter-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.newsletter-container,
+.newsletter-form input, 
+.newsletter-form button {
+    border-radius: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.newsletter-form button {
+    height: 40px;
+    padding: 0 35px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid white;
+}
+
+.newsletter-form button:hover {
+    background-color: white;
+    color: var(--BLUE);
+    transition: 300ms;
+}
+
+@media screen and (max-width: 768px) {
+    #newsletter {
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        gap: 20px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+/************ FOOTER STYLES *************/
+
+
+footer {
+    padding: 25px 0;
+    background-color: var(--DARK);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
